@@ -12,6 +12,10 @@ body {
   margin-right: auto;
 }
 
+a {
+  color: #27232d;
+  text-decoration: none;
+}
 .App {
   text-align: center;
 }

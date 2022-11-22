@@ -4,10 +4,11 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-// import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
+import PositionedMenu from "./menu";
 
 
 export default function Navbar() {
@@ -19,8 +20,8 @@ export default function Navbar() {
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
             My projects
           </Typography>
-          {/* <Button color="inherit">Login</Button> */}
-        </Toolbar>
+          <PositionedMenu />
+         </Toolbar>
       </AppBar>
     </Box>
     </ThemeProvider>

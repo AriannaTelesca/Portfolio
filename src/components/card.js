@@ -15,11 +15,12 @@ import IconButton from '@mui/material/IconButton';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
+import myTheme from './theme';
 import data from './data.js';
 
 export default function MediaCard() {
    
+    const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = data.length;
   
@@ -32,16 +33,16 @@ export default function MediaCard() {
     };
 
   return (
-    <ThemeProvider theme={theme}>
-    <Box className='Box' sx={{ maxWidth: 900, flexGrow: 1}}>
-    <Paper
+    <ThemeProvider theme={myTheme}>
+    <Box className='Box'  sx={{ maxWidth: 900, flexGrow: 1}}>
+    <Paper 
         elevation={0}
         sx={{
           display: 'flex',
           alignItems: 'center',
           height: 50,
           pl: 2,
-          backgroundColor: 'primary',
+          color: 'primary'
         }}
       >
         <Typography>{data[activeStep].title}</Typography>
